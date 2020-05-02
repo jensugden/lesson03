@@ -1,0 +1,11 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+//import css for main html element
+@import 'main';
+
+//import css for detail portion of card
+@import 'details';

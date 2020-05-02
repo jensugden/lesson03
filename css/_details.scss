@@ -1,0 +1,9 @@
+//this code applies to the center gray box of detail information about Steve Smith
+
+.details {
+  padding: 2rem;
+  margin-left: 3rem;
+  border-style: none;
+  background-color: lighten($black, 90%);
+  flex-grow: 1;
+}

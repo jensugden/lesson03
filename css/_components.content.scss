@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+// .main {
+//     padding: 2rem;
+// }
+//
+// h1 {
+//     color: $red;
+// }
+
+//moved to partials file
+// .main {
+//     padding: 2rem;
+//     border-style: solid;
+//     border-width: 3rem;
+//     border-color: $gray;
+// }
+
+//flex formatting
+.flex-container {
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 2rem;
+  margin: 2rem;
+  align-items: center;
+}
+
+.headshot {
+  border-radius: 50%;
+  max-width: 30rem;
+  align-items: center;
+}
+
+//combined h1 and h2 to take advantage of similar styles
+h1, h2 {
+    color: lighten($black, 50%);
+    text-align: center;
+      &:hover {
+        color: $cardBlue;
+    };
+}
+
+//this text is in the details portion of card. Couldn't figure out what kind nesting to do, so just added the semi-colon at end of each line
+p {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  color: lighten($black, 50%);
+    &:hover {
+      color: $cardBlue;
+    }
+}
+
+//moved to partials file
+// .details {
+//   padding: 2rem;
+//   margin-left: 3rem;
+//   border-style: none;
+//   background-color: lighten($black, 90%);
+//   flex-grow: 1;
+// }
+
+//this mixin transforms the headshot by adding a drop shadow
+@mixin transform {
+  padding: .25rem;
+  transition: transform .2s;
+  margin: 0 auto;
+    &:hover {
+      box-shadow: 10px 10px 50px gray;
+    };
+}
+
+@mixin white {
+  background-color: lighten($black,90%);
+    &:hover {
+      background-color: $white;
+      border-style: solid;
+      border-color: lighten($black,90%);
+      border-width: 1rem;
+    };
+}
+
+#water {
+  @include white;
+}
+
+#surprise {
+  @include transform;
+}
